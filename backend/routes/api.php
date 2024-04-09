@@ -51,39 +51,39 @@ Route::prefix('users')->middleware(['auth:sanctum', 'checkRole:superAdmin,admin'
 Route::prefix('events')->group(function () {
     Route::get('/', [EventController::class, 'index']);
     Route::get('/{id}', [EventController::class, 'show']);
-    // Route::middleware(['checkRole:superAdmin,admin,editor,publisher'])->group(function () {
+    Route::middleware(['checkRole:superAdmin,admin,editor,publisher'])->group(function () {
         Route::post('/', [EventController::class, 'store']);
         Route::post('/{event}', [EventController::class, 'update']);
         Route::delete('/{event}', [EventController::class, 'destroy']);
     });
-// });
+});
 
 Route::prefix('posts')->group(function () {
     Route::get('/', [PostController::class, 'index']);
     Route::get('/{id}', [PostController::class, 'show']);
-    // Route::middleware(['checkRole:superAdmin,admin,editor,publisher'])->group(function () {
+    Route::middleware(['checkRole:superAdmin,admin,editor,publisher'])->group(function () {
         Route::post('/', [PostController::class, 'store']);
         Route::post('/{post}', [PostController::class, 'update']);
         Route::delete('/{post}', [PostController::class, 'destroy']);
-    // });
+    });
 });
 
 Route::prefix('department')->group(function () {
     Route::get('/', [DepartmentController::class, 'index']);
     Route::get('/{id}', [DepartmentController::class, 'show']);
-    // Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
+    Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
         Route::post('/', [DepartmentController::class, 'store']);
         Route::post('/{department}', [DepartmentController::class, 'update']);
         Route::delete('/{department}', [DepartmentController::class, 'destroy']);
-    // });
+    });
 });
 
 Route::prefix('jobs')->group(function () {
-    // Route::middleware(['checkRole:superAdmin,admin'])->group(function () {
+    Route::middleware(['checkRole:superAdmin,admin'])->group(function () {
         Route::get('/', [JobController::class, 'index']);
         Route::get('/{id}', [JobController::class, 'show']);
         Route::delete('/{job}', [JobController::class, 'destroy']);
-    // });
+    });
     Route::post('/', [JobController::class, 'store']);
     Route::post('/{job}', [JobController::class, 'update']);
 });
@@ -91,62 +91,62 @@ Route::prefix('jobs')->group(function () {
 Route::prefix('faculty')->group(function () {
     Route::get('/', [FacultyController::class, 'index']);
     Route::get('/{id}', [FacultyController::class, 'show']);
-    // Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
+    Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
         Route::post('/', [FacultyController::class, 'store']);
         Route::post('/{faculty}', [FacultyController::class, 'update']);
         Route::delete('/{faculty}', [FacultyController::class, 'destroy']);
-    // });
+    });
 });
 
 Route::prefix('about')->group(function () {
     Route::get('/', [AboutUniversityController::class, 'index']);
     Route::get('/{id}', [AboutUniversityController::class, 'show']);
-    // Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
+    Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
         Route::post('/', [AboutUniversityController::class, 'store']);
         Route::post('/{aboutUniversity}', [AboutUniversityController::class, 'update']);
         Route::delete('/{aboutUniversity}', [AboutUniversityController::class, 'destroy']);
-    // });
+    });
 });
 
 Route::prefix('member')->group(function () {
     Route::get('/', [FacultyMemberController::class, 'index']);
     Route::get('/{id}', [FacultyMemberController::class, 'show']);
-    // Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
+    Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
         Route::post('/', [FacultyMemberController::class, 'store']);
         Route::post('/{facultyMember}', [FacultyMemberController::class, 'update']);
         Route::delete('/{facultyMember}', [FacultyMemberController::class, 'destroy']);
-    // });
+    });
 });
 
 Route::prefix('supervisory')->group(function () {
     Route::get('/', [SupervisoryTeamController::class, 'index']);
     Route::get('/{id}', [SupervisoryTeamController::class, 'show']);
-    // Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
+    Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
         Route::post('/', [SupervisoryTeamController::class, 'store']);
         Route::post('/{supervisoryTeam}', [SupervisoryTeamController::class, 'update']);
         Route::delete('/{supervisoryTeam}', [SupervisoryTeamController::class, 'destroy']);
-    // });
+    });
 });
 
 Route::prefix('StudyPlan')->group(function () {
     Route::get('/', [StudyPlanController::class, 'index']);
     Route::get('/{id}', [StudyPlanController::class, 'show']);
-    // Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
+    Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
         Route::post('/', [StudyPlanController::class, 'store']);
         Route::post('/{studyPlan}', [StudyPlanController::class, 'update']);
         Route::delete('/{studyPlan}', [StudyPlanController::class, 'destroy']);
-    // });
+    });
 });
 
 Route::prefix('projects')->group(function () {
     Route::get('/', [StudentProjectsController::class, 'index']);
     Route::get('/{id}', [StudentProjectsController::class, 'show']);
-    // Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
+    Route::middleware(['checkRole:superAdmin,admin,editor'])->group(function () {
         Route::post('/', [StudentProjectsController::class, 'store']);
         Route::post('/{studentProject}', [StudentProjectsController::class, 'update']);
         Route::delete('/{studentProject}', [StudentProjectsController::class, 'destroy']);
     });
-// });
+});
 
 // Route for Json Data
 Route::prefix('detailed')->group(function () {
@@ -156,5 +156,5 @@ Route::prefix('detailed')->group(function () {
         Route::post('/', [DetailController::class, 'store']);
         Route::post('/{detail}', [DetailController::class, 'update']);
         Route::delete('/{detail}', [DetailController::class, 'destroy']);
-    });
-// });
+    // });
+});

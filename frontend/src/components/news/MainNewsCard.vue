@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-gray-light mt-[4rem] mr-7 basis-6/12 flex flex-col items-center justify-around"
+    class="bg-gray-light dark:bg-darkMode-gray-light mt-[4rem] mr-7 basis-6/12 flex flex-col items-center justify-around"
   >
     <img loading="lazy"  :src="imgPath" class="w-96" />
     <h1 class="text-green-dark font-black text-3xl text-center">

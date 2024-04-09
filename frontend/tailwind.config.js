@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
     content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+    darkMode: "class",
     theme: {
         extend: {
             boxShadow: {
@@ -53,8 +55,32 @@ export default {
                     dark: "#2D312B",
                 },
                 cyan: {
-                    light: "#99D9DB"
-                }
+                    light: "#99D9DB",
+                },
+                darkMode: {
+                    green: {
+                        light: "#3D6D70",
+                        DEFAULT: "#3D6D70",
+                        dark: "#254E4F",
+                    },
+                    blue: {
+                        light: "#6CA1D9",
+                        dark: "#163D53",
+                    },
+                    gray: {
+                        light: "#3A3B3C",
+                        DEFAULT: "#A0A3A6",
+                        dark: "#5E6165",
+                    },
+                    zinc: {
+                        light: "#D6D8D5",
+                        DEFAULT: "#8A9186",
+                        dark: "#3F433D",
+                    },
+                    cyan: {
+                        light: "#A5D6D9",
+                    },
+                },
             },
         },
     },

@@ -5,7 +5,7 @@
       <div class="line mb-8"></div>
       <p class="max-w-[53rem] text-center text-[#ccd2e9] text-lg font-medium mb-9">{{ green }}</p>
       <NewsSection :apiData="apiData" :mainCard="mainCard" :numWordsToShow="numWordsToShow" :handleClick="handleClick"
-        :truncatedDescription="truncatedDescription" />
+        :truncatedDescription="truncatedDescription"/>
   </div>
 </template>
 <script setup>

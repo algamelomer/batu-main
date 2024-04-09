@@ -97,15 +97,17 @@ trait CrudOperationsTrait
     {
         foreach ($records as $record) {
             $filePath = $element->$record;
-            if (file_exists($filePath)) {
-                $fileName = basename($filePath);
-                $folder = $this->findFolder($fileName);
-                $imagePath = public_path('assets/' . $folder . '/' . $fileName);
+            $fileName = basename($filePath);
+            $folder = $this->findFolder($fileName);
+            $imagePath = public_path('assets/' . $folder . '/' . $fileName);
+
+            if (file_exists($imagePath)) {
                 unlink($imagePath);
             }
         }
         $element->delete();
     }
+
 
     /*
     |--------------------------------------------------------------------------
@@ -120,7 +122,7 @@ trait CrudOperationsTrait
             'jpg' => 'images', 'jpeg' => 'images', 'png' => 'images', 'svg' => 'images', 'mp4' => 'video', 'pdf' => 'files', 'doc' => 'files', 'docx' => 'files', 'txt' => 'files', 'xls' => 'files', 'xlsx' => 'files',
         ];
 
-        return $folders[$fileExtension] ?? 'file';
+        return $folders[$fileExtension] ?? 'files';
     }
 
     public function getForeignKey($model, $foreignKey, $id)

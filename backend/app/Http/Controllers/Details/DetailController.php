@@ -40,7 +40,7 @@ class DetailController extends Controller
     public function index()
     {
         try {
-            $detail = $this->getRecord(new Detail, 'title', 'image', 'description', 'category', 'counter_number');
+            $detail = $this->getRecord(new Detail, 'id', 'title', 'image', 'description', 'category', 'counter_number');
 
             $data = [
                 'activity' => [],

@@ -1,12 +1,11 @@
 <template>
-  <div class="bg-gray-light pt-8 mt-8" v-if="props.activities">
+  <div class="bg-gray-light dark:bg-darkMode-gray-light pt-8 mt-8" v-if="props.activities">
     <div class="w-full flex flex-col justify-center items-center">
       <BaseTitle title="Our Activities" />
     </div>
-    <BaseSubtitle subtitle=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
-          justo ipsum. Sed accumsan quam vitae est varius" />
+    <BaseSubtitle subtitle="Engage in diverse student activities fostering growth, leadership, and community. Unleash your potential through events, clubs, and meaningful connections." />
 
-    <CardGrid :cards="props.activities
+    <CardGrid :cards="props.activities 
     // [
     //   {
     //     iconPath: '/src/assets/icons/carbon_education.svg',

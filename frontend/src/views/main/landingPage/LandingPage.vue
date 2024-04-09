@@ -1,11 +1,11 @@
 <template>
   <template v-if="!loader">
-    <LandingImage :counter="details.counter" color="text-gray-light" v-if="details.counter"/>
+    <LandingImage :counter="details.counter" color="text-gray-light" background="bg-gray-light" v-if="details.counter"/>
     <News :news="news" class=" mt-16" />
     <Departments :departments="departmentData" v-if="departmentData" />
     <OurActivities :activities="details.activity"/>
-    <BatuCounter class="sm:hidden" :counter="details.counter" color="text-gray-dark" v-if="details.counter"/>
-    <!-- <BatuJourneys /> -->
+    <BatuCounter class="sm:hidden" :counter="details.counter" color="text-gray-dark" background="bg-gray-dark" v-if="details.counter"/>
+    <BatuJourneys />
   </template>
   <template v-else>
     <div class="flex justify-center items-center h-screen">
@@ -34,7 +34,7 @@ import filterData from '@/global/filterData.js';
 import LandingImage from "./components/LandingImage.vue";
 import OurActivities from "./components/OurActivities.vue";
 import BatuCounter from "./components/BatuCounter.vue";
-// import BatuJourneys from "./components/BatuJourneys.vue";
+import BatuJourneys from "./components/BatuJourneys.vue";
 import Departments from "./components/Departments.vue";
 import News from "@/views/main/landingPage/components/news.vue";
 

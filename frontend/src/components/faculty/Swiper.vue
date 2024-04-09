@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center justify-between w-full mx-auto py-16 bg-gray-light my-11 gap-7">
+    <div class="flex flex-col items-center justify-between w-full mx-auto py-16 bg-gray-light dark:bg-darkMode-gray-light my-11 gap-7">
         <div class=" flex flex-col items-center">
             <BaseTitle class=" font-bold font-mulish text-4xl text-green-dark" :title="title" :animate="true" />
         </div>
@@ -14,9 +14,9 @@
 
         <!-- Swiper for the content -->
         <div class="w-full">
-            <swiper :pagination="false" :modules="modules" :slides-per-view="slides" :freeMode="true" :space-between="25"
-                :centeredSlides="true" class="mySwiper facultie-swiper" @swiper="onSwiper" @slideChange="onSlideChange"
-                :class="{ 'md:w-11/12': Card == 'projects' }">
+            <swiper :pagination="false" :modules="modules" :slides-per-view="slides" :freeMode="true"
+                :space-between="25" :centeredSlides="true" class="mySwiper facultie-swiper" @swiper="onSwiper"
+                @slideChange="onSlideChange" :class="{ 'md:w-11/12': Card == 'projects' }">
                 <swiper-slide v-for="item in items" :key="item.id" v-motion-fade-visible
                     class="swiper-slide-item relative !h-[30rem] md:!h-72 flex flex-col bg-green-light"
                     :class="{ 'cursor-pointer': Card == 'departments' }">
@@ -32,17 +32,24 @@
                             </div>
                             <div v-if="Card == 'projects'"
                                 class=" absolute gap-2 bottom-2 w-full left-0 md:w-3/4 flex flex-col">
-                                <div class="bg-green-dark text-white text-center text-sm rounded-3xl w-11/12 m-auto py-2">
+                                <div
+                                    class="bg-green-dark text-white text-center text-sm rounded-3xl w-11/12 m-auto py-2">
                                     {{
                                         item.team_name }}</div>
-                                <div class="bg-green-dark text-white text-center text-sm rounded-3xl w-11/12 m-auto py-2 cursor-pointer"
-                                    @click.prevent="downloadProjectFile(item.file)">download info</div>
+                                <div class="flex w-11/12 justify-between m-auto gap-4">
+                                    <router-link to="/soon"
+                                        class="bg-green-dark text-white text-center text-sm rounded-3xl w-full m-auto py-2 cursor-pointer">
+                                        read more
+                                    </router-link>
+                                    <div class="bg-green-dark text-white text-center text-sm rounded-3xl w-full m-auto py-2 cursor-pointer"
+                                        @click.prevent="downloadProjectFile(item.file)">download info</div>
+                                </div>
                             </div>
                         </div>
 
                         <div
                             :class="{ 'h-60 w-full md:w-28 md:h-32': Card === 'departments', 'w-full h-60 md:h-full md:w-1/4': Card === 'projects' }">
-                            <img loading="lazy"  :src="item.image" alt="" class="object-cover w-full h-full">
+                            <img loading="lazy" :src="item.image" alt="" class="object-cover w-full h-full">
                         </div>
                         <div v-if="Card == 'departments'" @click="goToItemDepartment(item.id)"
                             class="flex justify-around w-3/4 absolute bottom-4 right-1/2 translate-x-1/2 m-auto items-center text-white bg-green-dark px-5 py-2 rounded-3xl gap-4">
@@ -56,7 +63,7 @@
         </div>
     </div>
 </template>
-  
+
 <script setup>
 import { ref, onMounted, onUnmounted, watchEffect } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -132,7 +139,7 @@ watchEffect(() => {
     handleResize();
 });
 </script>
-  
+
 <style scoped>
 .pagination {
     @apply flex justify-between border-[1px] border-green-dark h-[60px] rounded-[60px] mb-8
@@ -146,4 +153,3 @@ watchEffect(() => {
     @apply bg-green-dark text-white
 }
 </style>
-  

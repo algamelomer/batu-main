@@ -6,7 +6,7 @@
     v-motion-pop
     @click="emitOnclick"
     class="group w-full cursor-pointer hover:bg-green-light duration-200"
-    :class="isActive ? 'bg-green-light' : 'bg-gray-light'"
+    :class="isActive ? 'bg-green-light' : 'bg-gray-light dark:bg-darkMode-gray-light'"
   >
     <div class="pl-3 pt-3 w-[75%]">
       <h1 class="text-2xl font-black text-green-dark">

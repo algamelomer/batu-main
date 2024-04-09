@@ -3,13 +3,13 @@
         <Alert v-if="alert" :alert-message="alert" class=" z-40 !fixed top-6 right-1/2 translate-x-1/2"
             color=" bg-green-500"></Alert>
     </transition>
-    <div class=" bg-[#F5F7FA] p-12 w-full md:w-11/12 m-auto rounded-md flex flex-col items-center text-center">
+    <div class=" bg-gray-light dark:bg-darkMode-gray-light p-12 w-full md:w-11/12 m-auto rounded-md flex flex-col items-center text-center">
         <h1 class=" font-mulish font-bold text-4xl text-green-dark">{{ title }}</h1>
         <hr width="50px" class="border-black border-[1.5px] mt-5" />
             <form class=" grid grid-cols-1 w-full gap-4 min-[850px]:grid-cols-2" @submit.prevent="submitForm(form)">
                 <div class="relative h-fit w-full sm:w-fit m-auto">
                     <select v-model="formData.contact_reason"
-                        class="w-full m-auto sm:w-[335px] h-14 p-2 pr-10 border border-green-dark rounded-[55px] shadow-sm focus:outline-none focus:border-green-dark text-center text-white bg-green appearance-none">
+                        class=" cursor-pointer w-full m-auto sm:w-[335px] h-14 p-2 pr-10 border border-green-dark rounded-[55px] shadow-sm focus:outline-none focus:border-green-dark text-center text-white bg-green hover:bg-green-dark transition duration-300 appearance-none">
                         <option value="" disabled selected>Choose your contact reason</option>
                         <option value="اقتراحات">اقتراحات</option>
                         <option value="شكاوي">شكاوي</option>
@@ -29,9 +29,9 @@
                     class=" w-full m-auto sm:w-[335px] h-14 rounded-[55px] border-[1.4px] active:border-green-dark border-green-dark text-green-dark text-center" />
 
                 <textarea placeholder="Enter your message" v-model="formData.message" type="text"
-                    class=" w-full m-auto sm:w-[335px] h-14 rounded-[55px] border-[1.4px] active:border-green-dark border-green-dark text-green-dark text-center pt-4"></textarea>
+                    class=" w-full m-auto sm:w-[335px] min-h-14 h-fit rounded-[55px] border-[1.4px] active:border-green-dark border-green-dark text-green-dark text-center pt-4"></textarea>
                 <button :disabled="loading" type="submit"
-                    class=" m-auto relative w-full sm:w-[335px] h-14 border border-green-dark rounded-[55px] shadow-sm focus:outline-none focus:border-green text-center text-white bg-green-dark">
+                    class=" m-auto relative w-full sm:w-[335px] h-14 border border-green-dark rounded-[55px] shadow-sm focus:outline-none focus:border-green text-center text-white bg-green transition duration-300 hover:bg-green-dark">
                     <span v-if="loading" class="absolute inset-0 flex items-center justify-center">
                         <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24">

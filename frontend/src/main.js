@@ -8,6 +8,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from '@fortawesome/free-regular-svg-icons';
 import BaseTitle from "@components/BaseTitle.vue";
 import BaseSubtitle from "@components/BaseSubtitle.vue";
 import TheNavBar from "@components/TheNavBar/TheNavBar.vue";
@@ -15,12 +16,14 @@ import TheFooter from "@components/TheFooter.vue";
 import BaseHeaderImage from "@components/BaseHeaderImage.vue";
 import intersectionDirective from "@/directives/IntersectDirective";
 import './axios';
+// import 'vue-turnjs/dist/vue-turnjs.esm.css';
+
 const pinia = createPinia();
 
 pinia.use(({ store }) => {
     store.router = markRaw(routes);
 });
-library.add(fab, fas);
+library.add(fab, fas, far);
 
 const app = createApp(App);
 app.use(pinia)

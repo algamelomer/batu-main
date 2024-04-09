@@ -91,12 +91,13 @@ const fetchData = async () => {
         // college.value = faculty.data.data;
         if (props.id) {
             const response = await axios.get('/api/detailed/' + props.id);
-            (response.details)
-            apiData.value = response.data
+            // console.log(response.data.data)
+            apiData.value = response.data.data
             form.value.title = apiData.value.title;
             form.value.category = apiData.value.category;
             form.value.image = apiData.value.image;
             form.value.description = apiData.value.description;
+            form.value.counter_number = apiData.value.counter_number
         }
     } catch (error) {
         console.error('Error fetching data:', error);

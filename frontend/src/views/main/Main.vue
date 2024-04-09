@@ -1,8 +1,14 @@
 <template>
-    <TheNavBar />
-    <router-view></router-view>
+  <div class="dark:bg-[#18191A]">
+    <TheNavBar class="dark:bg-[#18191A]" />
+    <router-view class=" dark:bg-[#18191A] "></router-view>
     <TheFooter />
-  </template>
-  
-  <script></script>
-  
+  </div>
+</template>
+
+<script setup>
+// import { useDark, useToggle } from '@vueuse/core';
+
+// const isDark = useDark();
+// const toggleDark = useToggle(isDark);
+</script>

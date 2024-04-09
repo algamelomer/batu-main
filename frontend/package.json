@@ -16,6 +16,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "@headlessui/vue": "^1.7.17",
     "@heroicons/vue": "^2.1.1",
+    "@vueuse/core": "^10.9.0",
     "@vueuse/motion": "^2.0.0",
     "axios": "^1.4.0",
     "pinia": "^2.0.36",
@@ -26,6 +27,7 @@
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.29",
     "@vitejs/plugin-vue": "^4.5.2",
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.33",

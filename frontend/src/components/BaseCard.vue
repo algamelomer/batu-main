@@ -22,7 +22,7 @@
       class="font-normal text-center text-gray-dark"
       :class="{ 'text-white': useWhite }"
     >
-      {{ card.subtitle }}
+      {{ card.subtitle || card.description }}
     </p>
   </div>
 </template>

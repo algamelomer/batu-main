@@ -1,19 +1,19 @@
 <template>
   <div @mouseleave="deActivateDropDown" @mouseenter="activateDropDown">
-    <button type="button" class="text-base text-green h-full" data-dropdown-toggle="dropdown">
+    <button type="button" class="text-base text-green h-full m-auto" data-dropdown-toggle="dropdown">
       {{ name }}
-      <font-awesome-icon icon="fa-solid fa-angle-down" class="text-white" size="xl" />
+      <font-awesome-icon icon="fa-solid fa-angle-down" class="text-green" size="xl" />
     </button>
     <transition>
       <div v-if="dropIsActive" class="rounded-sm absolute bg-white  origin-top-left divide-y divide-gray-100 shadow">
-        <ul class="py-2 text-green-dark text-sm font-thin relative">
-          <li v-for="faculty in faculties" :key="faculty.id" class="group p-2 relative hover:text-white text-green-dark hover:bg-green-dark">
-            <router-link :to="'/faculty/' + faculty.id" class="block px-4 py-2 "
+        <ul class="py-2 text-green-dark text-sm font-thin relative" @mouseleave="clearHoveredFaculty()">
+          <li v-for="faculty in faculties" :key="faculty.id" class="">
+            <router-link :to="'/faculty/' + faculty.id" class="block px-4 py-2 group p-2 relative hover:text-white text-green-dark hover:bg-green-dark"
               @mouseenter="setHoveredFaculty(faculty)">
               {{ faculty.name }}
             </router-link>
-            <ul v-if="isHovered(faculty)"
-              class="absolute top-0 left-full bg-white shadow-md rounded-sm w-40 hidden group-hover:block">
+            <ul v-if="isHovered(faculty)" 
+              class="absolute top-0 left-full bg-white shadow-md rounded-sm w-40 group-hover:block">
               <li v-for="department in test(faculty.id)" :key="department.id"
                 class="group p-2 hover:bg-green-dark text-green-dark hover:text-white cursor-pointer">
                 <router-link :to="'/departments/' + department.id">{{ department.name }}</router-link>
@@ -28,7 +28,6 @@
 
 <script setup>
 import { ref } from "vue";
-import { defineProps } from "vue";
 import { useStore } from '@/store'
 
 const faculties = ref([])

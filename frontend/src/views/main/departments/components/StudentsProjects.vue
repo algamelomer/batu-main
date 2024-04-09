@@ -1,6 +1,6 @@
 <!-- <template>
   <div
-    class="w-screen flex flex-col justify-center items-center bg-gray-light py-16"
+    class="w-screen flex flex-col justify-center items-center bg-gray-light dark:bg-darkMode-gray-light py-16"
   >
     <BaseTitle title="Student Projects" class="mt-11" :animate="true" />
     <BaseSubtitle

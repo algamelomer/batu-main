@@ -20,14 +20,14 @@
     <DepartmentsSlide />
     <newsSlide :news="news" class=" mt-16" />
 
-    <div class="bg-gray-light flex flex-col justify-around h-[30rem] mt-20">
+    <div class="bg-gray-light dark:bg-darkMode-gray-light flex flex-col justify-around h-[30rem] mt-20">
       <template v-for="items in aboutData.UniversityInfo">
         <BaseTitle :title="items.title" :animate="true" class="mx-auto" />
         <BaseSubtitle :subtitle="items.description" />
       </template>
     </div>
     <template v-for="items in aboutData.policies">
-      <div class="bg-gray-light flex flex-col justify-around h-[30rem] mt-20">
+      <div class="bg-gray-light dark:bg-darkMode-gray-light flex flex-col justify-around h-[30rem] mt-20">
         <BaseTitle :title="items.title" :animate="true" class="mx-auto" />
         <BaseSubtitle :subtitle="items.description" />
       </div>

@@ -6,6 +6,8 @@ import AboutUs from "@views/main/aboutUs/AboutUs.vue";
 import faculty from "@views/main/faculty/Faculty.vue";
 import ContactUs from "@views/main/ContactUs/Contact.vue";
 import Main from "@views/main/Main.vue";
+import Book from "@views/main/flipBook/Book.vue";
+
 export default createRouter({
     scrollBehavior(to, from, savedPosition) {
         // always scroll to top
@@ -22,7 +24,14 @@ export default createRouter({
                 { path: "/faculty/:id", component: faculty, props: true },
                 { path: "/aboutUs", component: AboutUs },
                 { path: "/ContactUs", component: ContactUs },
+                { path: "/book", component: Book },
             ],
+        },
+        {
+            path: "/soon",
+            name: "Soon",
+            component: () =>
+                import ("@/views/coming_soon.vue"),
         },
 
         {
@@ -124,6 +133,12 @@ export default createRouter({
                         import ("@/components/dashboard/Edit.vue"),
                 },
             ],
+        },
+        {
+            path: "/:catchAll(.*)",
+            name: "NotFound",
+            component: () =>
+                import ("@/views/404.vue"),
         },
     ],
 });

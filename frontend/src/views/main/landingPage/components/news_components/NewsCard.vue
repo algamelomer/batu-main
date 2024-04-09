@@ -1,7 +1,7 @@
 <!-- components/NewsCard.vue -->
 <template>
   <div :class="{ 'active-card': props.isActive }"
-    class="m-auto card w-96 h-44 bg-gray-light cursor-pointer flex transition duration-1000 ease-in-out "
+    class="m-auto card w-96 h-44 bg-gray-light dark:bg-darkMode-gray-light cursor-pointer flex transition duration-1000 ease-in-out "
     @click="$emit('handleClick', props.item)">
     <div class="w-1/3 h-full">
       <img loading="lazy"  :src="props.item.file" alt="" class="w-full h-full object-cover">

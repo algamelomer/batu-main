@@ -4,7 +4,7 @@
     v-visible="visibilityChanged"
   >
     <h1
-      class="text-green-dark text-center font-bold text-4xl"
+      class="text-green-dark text-center font-bold !text-3xl sm:!text-4xl"
       :class="titleClasses"
       @animationend="onAnimationEnd"
     >

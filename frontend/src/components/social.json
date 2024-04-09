@@ -1,0 +1,22 @@
+[{
+        "id": 1,
+        "name": "facebook",
+        "link": "https://www.facebook.com/people/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A8%D8%B1%D8%AC-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8-%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A9/100085885038638/",
+        "icon": "facebook",
+        "iconType": "fab"
+    },
+    {
+        "id": 2,
+        "name": "youtube",
+        "link": "https://www.youtube.com/@batu1022",
+        "icon": "youtube",
+        "iconType": "fab"
+    },
+    {
+        "id": 3,
+        "name": "gmail",
+        "link": "batu.mediadept@gmail.com",
+        "icon": "envelope",
+        "iconType": "fas"
+    }
+]

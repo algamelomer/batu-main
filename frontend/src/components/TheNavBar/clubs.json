@@ -1,0 +1,16 @@
+[{
+        "id": 1,
+        "name": "it club",
+        "link": "https://example.com/1"
+    },
+    {
+        "id": 2,
+        "name": "almtawer",
+        "link": "https://example.com/2"
+    },
+    {
+        "id": 3,
+        "name": "tech mental",
+        "link": "https://example.com/3"
+    }
+]

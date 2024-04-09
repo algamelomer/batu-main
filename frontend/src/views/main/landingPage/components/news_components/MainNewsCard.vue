@@ -1,8 +1,8 @@
 <!-- components/MainCard.vue -->
 <template>
   <div
-    class="bg-gray-light w-full min-[1222px]:w-[45rem] xlg:w-[45rem] flex mt-6 min-[1222px]:mt-0 py-4 min-[1222px]:p-0 h-[45rem]">
-    <div class="items-center flex flex-col gap-14 m-auto px-6">
+    class="bg-gray-light dark:bg-darkMode-gray-light w-full min-[1222px]:w-[45rem] xlg:w-[45rem] flex mt-6 min-[1222px]:mt-0 py-4 min-[1222px]:p-0 h-[45rem]">
+    <div class="items-center flex flex-col gap-14 m-auto px-6 w-full">
       <div class="w-80 sm:w-96 h-64">
         <img loading="lazy"  :src="props.mainCard.img" alt="" class="w-full h-full object-cover">
       </div>

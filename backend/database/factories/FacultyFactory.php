@@ -16,7 +16,7 @@ class FacultyFactory extends Factory
      */
     public function definition(): array
     {
-        $collegeNames = ['College of Health Sciences', 'College of Industry and Energy'];
+        $collegeNames = ['Health Sciences', 'Industry and Energy'];
 
         $imageUrls = [
             'https://www.it-club.top/logos/1702653027.jpg',

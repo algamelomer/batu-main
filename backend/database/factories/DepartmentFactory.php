@@ -63,7 +63,7 @@ class DepartmentFactory extends Factory
             ],
             [
                 'name' => "Railway technology",
-                'faculty_id' => 2,
+                'faculty_id' => 1,
                 'description' => "Embark on a rewarding journey as a Nursing Assistant. Learn essential skills to support healthcare professionals and make a difference in patient care.",
                 'description_video' => "Embark on a rewarding journey as a Nursing Assistant. Learn essential skills to support healthcare professionals and make a difference in patient care.",
                 'image' => 'https://img.freepik.com/free-vector/high-speed-transport-abstract-concept-illustration_335657-3926.jpg?size=626&ext=jpg&ga=GA1.1.1851756999.1695294167&semt=ais',
@@ -74,7 +74,7 @@ class DepartmentFactory extends Factory
             ],
             [
                 'name' => "Textile technology",
-                'faculty_id' => 2,
+                'faculty_id' => 1,
                 'description' => "Embark on a rewarding journey as a Nursing Assistant. Learn essential skills to support healthcare professionals and make a difference in patient care.",
                 'description_video' => "Embark on a rewarding journey as a Nursing Assistant. Learn essential skills to support healthcare professionals and make a difference in patient care.",
                 'image' => 'https://img.freepik.com/free-vector/professional-sewing-classes-vocational-education-clothes-manufacturing-seamstress-training-handmade-clothing-production-dressmaking-courses_335657-140.jpg?size=626&ext=jpg&ga=GA1.1.1851756999.1695294167&semt=ais',
@@ -85,7 +85,7 @@ class DepartmentFactory extends Factory
             ],
             [
                 'name' => "Technology of tractors and agricultural equipment",
-                'faculty_id' => 2,
+                'faculty_id' => 1,
                 'description' => "Embark on a rewarding journey as a Nursing Assistant. Learn essential skills to support healthcare professionals and make a difference in patient care.",
                 'description_video' => "Embark on a rewarding journey as a Nursing Assistant. Learn essential skills to support healthcare professionals and make a difference in patient care.",
                 'image' => 'https://img.freepik.com/free-vector/farming-robots-isometric-composition_1284-23024.jpg?size=626&ext=jpg&ga=GA1.1.1851756999.1695294167&semt=ais',

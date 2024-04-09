@@ -24,7 +24,7 @@ onUnmounted(() => {
   window.removeEventListener('resize', updateScreenWidth);
 });
 
-const isDesktop = computed(() => screenWidth.value > 840);
+const isDesktop = computed(() => screenWidth.value > 850);
 
 
 

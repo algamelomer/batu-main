@@ -89,16 +89,19 @@ function animateStudentClubsCount(limit) {
 }
 </script> -->
 <template>
-  <div class="grid grid-cols-1 lg:grid-cols-3 w-11/12 md:grid-cols-2 items-center">
-    <div v-for="item in props.counter" :key="item.id"
-      class=" w-80 text-center items-center px-7 py-4 flex flex-col m-auto gap-4"
-      :class="props.color">
-      <img loading="lazy"  :src="item.image" alt="" class="m-auto">
-      <h3 class=" font-sans text-xl font-bold flex justify-center gap-2"><count-up :end-val="item.counter_number" :duration="2.5" :autoplay="true" :options="options"></count-up> {{ item.title }}</h3>
-      <p class=" text-xs font-normal">{{ item.description }}</p>
+  <template v-if=" props.counter">
+    <div class="grid grid-cols-1 lg:grid-cols-3 w-11/12 md:grid-cols-2 items-center">
+      <div v-for="item in props.counter" :key="item.id"
+        class=" w-80 text-center items-center px-7 py-4 flex flex-col m-auto gap-4" :class="props.color">
+        <span class=" w-16 h-16">
+          <img loading="lazy" :src="item.image" alt="" class="m-auto w-full object-cover" :class="props.background">
+        </span>
+        <h3 class=" font-sans text-xl font-bold flex justify-center gap-2"><count-up :end-val="item.counter_number"
+            :duration="2.5" :autoplay="true" :options="options"></count-up> {{ item.title }}</h3>
+        <p class=" text-xs font-normal">{{ item.description }}</p>
+      </div>
     </div>
-  </div>
-  
+  </template>
 </template>
 
 <script setup>
@@ -115,7 +118,9 @@ const options = {
 const props = defineProps({
   counter: Array,
   color: String,
+  bg_color: String,
 })
+console.log(props.bg_color)
 const faculty = ref(0)
 const students = ref(0)
 const clubs = ref(0)
