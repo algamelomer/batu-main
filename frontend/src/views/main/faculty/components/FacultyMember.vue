@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center w-full mx-auto py-8 bg-gray-light dark:bg-darkMode-gray-light justify-around gap-5">
+    <div class="flex flex-col items-center w-full mx-auto py-8 px-10 bg-gray-light dark:bg-darkMode-gray-light justify-around gap-5">
         <div>
             <div class=" flex flex-col items-center">
                 <BaseTitle class="text-center font-bold font-mulish text-4xl text-green-dark" title="Our Staff"

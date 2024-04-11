@@ -6,6 +6,9 @@ import AboutUs from "@views/main/aboutUs/AboutUs.vue";
 import faculty from "@views/main/faculty/Faculty.vue";
 import ContactUs from "@views/main/ContactUs/Contact.vue";
 import Main from "@views/main/Main.vue";
+import work_apply from "@views/main/apply_for_work/apply_for_work.vue";
+import how_to_apply from "@views/main/How_to_apply/How_to_apply.vue";
+
 import Book from "@views/main/flipBook/Book.vue";
 
 export default createRouter({
@@ -25,6 +28,8 @@ export default createRouter({
                 { path: "/aboutUs", component: AboutUs },
                 { path: "/ContactUs", component: ContactUs },
                 { path: "/book", component: Book },
+                { path: "/work_apply", component: work_apply },
+                { path: "/how_to_apply", component: how_to_apply },
             ],
         },
         {
@@ -119,6 +124,12 @@ export default createRouter({
                     props: true,
                     component: () =>
                         import ("@/views/auth/dashboard/Dashboard_details.vue"),
+                },
+                {
+                    path: "/dashboard/study",
+                    name: "DashboardStudy",
+                    component: () =>
+                        import ("@/views/auth/dashboard/Dashboard_study_plan.vue"),
                 },
                 {
                     path: "/dashboard/:category/Upload",

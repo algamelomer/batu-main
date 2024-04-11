@@ -18,6 +18,7 @@ import UsersForm from './Forms/UsersForm.vue'
 import Supervisory from './Forms/SuperVisoryForm.vue'
 import About from './Forms/AboutForm.vue';
 import DetailsForm from './Forms/DetailsForm.vue';
+import StudyForm from './Forms/StudyForm.vue';
 
 const category = ref('');
 
@@ -48,6 +49,8 @@ const getUploadFormComponent = (category) => {
       return About
     case 'details':
       return DetailsForm
+    case 'study':
+      return StudyForm
     default:
       return DefaultUploadForm;
   }

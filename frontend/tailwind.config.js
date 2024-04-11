@@ -11,7 +11,7 @@ export default {
             keyframes: {
                 Bpulse: {
                     "100%,0%": {
-                        transform: " scale(1.1) ",
+                        transform: " scale(1.05) ",
                     },
                     "50%": { transform: " scale(1) " },
                 },

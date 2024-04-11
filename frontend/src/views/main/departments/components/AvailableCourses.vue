@@ -1,5 +1,5 @@
 <template>
-  <div v-motion-fade-visible-once class="w-screen flex flex-col justify-center items-center bg-gray-light dark:bg-darkMode-gray-light py-16">
+  <div v-motion-fade-visible-once class="w-full flex flex-col justify-center items-center bg-gray-light dark:bg-darkMode-gray-light py-16">
     <BaseTitle title="Available Courses" :animate="true" class="mt-11" />
     <BaseSubtitle
       subtitle="Discover diverse academic paths. Explore our available courses, ranging from cutting-edge disciplines to time-tested subjects, shaping future leaders and innovators." />

@@ -2,7 +2,7 @@
 
 *in order to add a new api dashboard follow this*
 
-## make a vue file router in dasghoard folder then add it as a child route in index.js router to dashboard
+## make a vue file router in dashboard folder then add it as a child route in index.js router to dashboard
 
 ### go to sidebar component in the dashboard components then add a the new name of this dashboard and icons and label 
 

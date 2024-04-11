@@ -509,6 +509,71 @@ export const useAuthStore = defineStore("auth", {
             }
         },
 
+
+
+        async handleStudy(data) {
+            this.authErrors = [];
+            try {
+                await this.getToken();
+                if (!data.id) {
+                    data.id = "";
+                }
+                console.log(data.id)
+                    // (data);
+                const response = await axios.post("/api/StudyPlan/" + data.id, data, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                });
+
+                if (response.status === 201) {
+                    alert("Success");
+                    router.go(-1);
+                } else if (response.status === 200) {
+                    alert("Success");
+                    router.go(-1);
+                } else {
+                    alert("Error: Unexpected status code");
+                    // (data);
+                }
+            } catch (error) {
+                if (error.response) {
+                    if (error.response.status === 422) {
+                        this.authErrors = error.response.data.errors;
+                        alert("Error: Validation failed");
+                    } else {
+                        alert("Error: Server error");
+                    }
+                } else {
+                    alert("Error: Network error");
+                }
+            }
+        },
+
+        async handleStudyDelete(data) {
+            this.authErrors = [];
+            try {
+                await this.getToken();
+                await axios.delete("/api/StudyPlan/" + data);
+
+                alert("deleted successfully");
+                location.reload();
+            } catch (error) {
+                if (error.response) {
+                    if (error.response.status === 422) {
+                        this.authErrors = error.response.data.errors;
+                        alert("Error: Validation failed");
+                    } else {
+                        alert("Error: Server error");
+                    }
+                } else {
+                    alert("Error: Network error");
+                }
+            }
+        },
+
+
+
         async handleAbout_Us(data) {
             this.authErrors = [];
             try {

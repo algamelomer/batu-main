@@ -94,7 +94,7 @@ function animateStudentClubsCount(limit) {
       <div v-for="item in props.counter" :key="item.id"
         class=" w-80 text-center items-center px-7 py-4 flex flex-col m-auto gap-4" :class="props.color">
         <span class=" w-16 h-16">
-          <img loading="lazy" :src="item.image" alt="" class="m-auto w-full object-cover" :class="props.background">
+          <img loading="lazy" :src="item.image" alt="" class="m-auto w-full h-full object-contain grayscale filter brightness-100 " :class="props.background, props.styles">
         </span>
         <h3 class=" font-sans text-xl font-bold flex justify-center gap-2"><count-up :end-val="item.counter_number"
             :duration="2.5" :autoplay="true" :options="options"></count-up> {{ item.title }}</h3>
@@ -119,6 +119,7 @@ const props = defineProps({
   counter: Array,
   color: String,
   bg_color: String,
+  styles: String,
 })
 console.log(props.bg_color)
 const faculty = ref(0)

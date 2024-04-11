@@ -80,9 +80,9 @@ const fetchData = async () => {
     }
 };
 
-onMounted(() => {
+// onMounted(() => {
     fetchData();
-});
+// });
 const handleClick = () => {
     router.push({ name: 'DashboardUpload', params: { category: 'users' } });
 };

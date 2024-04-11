@@ -1,23 +1,25 @@
 <template>
     <template v-if="facultyData">
         <BaseHeaderImage :title="facultyData.faculty.name" :subtitle="facultyData.faculty.description"
-            :imgPath="facultyData.faculty.image" />
+            :imgPath="facultyData.faculty.image" class=" mb-14"/>
         <!-- deep -->
-        <BaseImgSection v-if="facultyData.faculty.supervisory_teams[0]"
-            :title="'Faculty ' + facultyData.faculty.supervisory_teams[0].position + '’s speech (' + facultyData.faculty.supervisory_teams[0].name + ' )'"
-            :description="facultyData.faculty.supervisory_teams[0].description"
-            :imgPath="facultyData.faculty.supervisory_teams[0].image" :animate="true" />
-        <!-- vice deep -->
-        <BaseImgSection v-if="facultyData.faculty.supervisory_teams[1]"
-            :title="'Faculty ' + facultyData.faculty.supervisory_teams[1].position + '’s speech (' + facultyData.faculty.supervisory_teams[1].name + ' )'"
-            :description="facultyData.faculty.supervisory_teams[1].description"
-            :imgPath="facultyData.faculty.supervisory_teams[1].image" :animate="true" />
-        <FacultyVideo :video="facultyData.faculty.video" :description="facultyData.faculty.description_video"
-            v-if="facultyData.faculty.video" />
-        <Departments :Departments="facultyData.faculty.department" v-if="facultyData.faculty.department.length" />
-        <Projects :Projects="facultyData.projects" v-if="facultyData.projects.length" />
-        <FacultyMember :FacultyMember="facultyData.faculty.faculty_member"
-            v-if="facultyData.faculty.faculty_member.length" />
+        <div class=" px-0 md:px-10">
+            <BaseImgSection v-if="facultyData.faculty.supervisory_teams[0]"
+                :title="'Faculty ' + facultyData.faculty.supervisory_teams[0].position + '’s speech (' + facultyData.faculty.supervisory_teams[0].name + ' )'"
+                :description="facultyData.faculty.supervisory_teams[0].description"
+                :imgPath="facultyData.faculty.supervisory_teams[0].image" :animate="true" />
+            <!-- vice deep -->
+            <BaseImgSection v-if="facultyData.faculty.supervisory_teams[1]"
+                :title="'Faculty ' + facultyData.faculty.supervisory_teams[1].position + '’s speech (' + facultyData.faculty.supervisory_teams[1].name + ' )'"
+                :description="facultyData.faculty.supervisory_teams[1].description"
+                :imgPath="facultyData.faculty.supervisory_teams[1].image" :animate="true" />
+            <FacultyVideo :video="facultyData.faculty.video" :description="facultyData.faculty.description_video"
+                v-if="facultyData.faculty.video" />
+            <Departments :Departments="facultyData.faculty.department" v-if="facultyData.faculty.department.length" />
+            <Projects :Projects="facultyData.projects" v-if="facultyData.projects.length" />
+            <FacultyMember :FacultyMember="facultyData.faculty.faculty_member"
+                v-if="facultyData.faculty.faculty_member.length" />
+        </div>
     </template>
     <template v-else>
         <div class="flex justify-center items-center h-screen">

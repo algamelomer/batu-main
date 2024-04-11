@@ -49,7 +49,7 @@
 
                         <div
                             :class="{ 'h-60 w-full md:w-28 md:h-32': Card === 'departments', 'w-full h-60 md:h-full md:w-1/4': Card === 'projects' }">
-                            <img loading="lazy" :src="item.image" alt="" class="object-cover w-full h-full">
+                            <img loading="lazy" :src="item.logo || item.image" alt="" class="object-cover w-full h-full" :class="{ ' !w-20 !object-contain': Card === 'departments'}">
                         </div>
                         <div v-if="Card == 'departments'" @click="goToItemDepartment(item.id)"
                             class="flex justify-around w-3/4 absolute bottom-4 right-1/2 translate-x-1/2 m-auto items-center text-white bg-green-dark px-5 py-2 rounded-3xl gap-4">

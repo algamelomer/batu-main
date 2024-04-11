@@ -31,14 +31,15 @@ let links = [
 	{ id: 1, name: 'DashboardUsers', label: 'users', icon: "users" },
 	{ id: 2, name: 'DashboardFaculties', label: 'faculties', icon: "building-columns" },
 	{ id: 3, name: 'DashboardDepartments', label: 'departments', icon: "school" },
-	{ id: 4, name: 'DashboardNews', label: 'News', icon: "newspaper" },
-	{ id: 5, name: 'DashboardArticle', label: 'Article', icon: "book" },
-	{ id: 6, name: 'DashboardLetter', label: 'Letter', icon: "scroll" },
-	{ id: 7, name: 'DashboardFacultyMember', label: 'faculty members', icon: "people-group" },
-	{ id: 8, name: 'DashboardProjects', label: 'projects', icon: "graduation-cap" },
-	{ id: 9, name: 'DashboardSupervisory', label: 'supervisory', icon: "address-card" },
-	{ id: 10, name: 'DashboardAboutUs', label: 'about-us', icon: "chalkboard-user" },
-	{ id: 11, name: 'DashboardDetails', label: 'details', icon: "circle-info" },
+	{ id: 4, name: 'DashboardStudy', label: 'study', icon: "book" },
+	{ id: 5, name: 'DashboardNews', label: 'News', icon: "newspaper" },
+	{ id: 6, name: 'DashboardArticle', label: 'Article', icon: "book" },
+	{ id: 7, name: 'DashboardLetter', label: 'Letter', icon: "scroll" },
+	{ id: 8, name: 'DashboardFacultyMember', label: 'faculty members', icon: "people-group" },
+	{ id: 9, name: 'DashboardProjects', label: 'projects', icon: "graduation-cap" },
+	{ id: 10, name: 'DashboardSupervisory', label: 'supervisory', icon: "address-card" },
+	{ id: 11, name: 'DashboardAboutUs', label: 'about-us', icon: "chalkboard-user" },
+	{ id: 12, name: 'DashboardDetails', label: 'details', icon: "circle-info" },
 
 ]
 

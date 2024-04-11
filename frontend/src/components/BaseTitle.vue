@@ -4,8 +4,8 @@
     v-visible="visibilityChanged"
   >
     <h1
-      class="text-green-dark text-center font-bold !text-3xl sm:!text-4xl"
-      :class="titleClasses"
+      class="text-green-dark text-center font-bold text-3xl sm:text-4xl"
+      :class="titleClasses, styles"
       @animationend="onAnimationEnd"
     >
       {{ title }}
@@ -22,6 +22,7 @@ export default {
     title: String,
     size: { type: String, default: "text-4xl" },
     animate: { type: Boolean, default: false },
+    styles: { type: String },
   },
   setup(props) {
     const animationFinished = ref(false);

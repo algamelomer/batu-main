@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen flex flex-col justify-center items-center bg-gray-light dark:bg-darkMode-gray-light py-16">
+  <div class="w-full flex flex-col justify-center items-center bg-gray-light dark:bg-darkMode-gray-light py-16 overflow-hidden">
     <BaseTitle title="Where can I work?" class="mt-11" :animate="true" />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
       <div v-for="(job, index) in jobs" :key="index" v-motion :initial="{ opacity: 0, x: getXPosition(index) }" :visible="{

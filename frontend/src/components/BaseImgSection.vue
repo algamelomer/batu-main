@@ -23,7 +23,7 @@
         Learn more
       </router-link>
     </div>
-    <div v-motion-fade-visible class="flex flex-shrink w-full sm:w-3/4 m-auto md:w-full lg:w-3/4">
+    <div v-motion-fade-visible class="flex flex-shrink w-11/12 sm:w-3/4 m-auto md:w-2/3 lg:w-2/6">
       <img loading="lazy"  :src="imgPath" class="rounded-md mx-auto w-full" />
     </div>
   </div>

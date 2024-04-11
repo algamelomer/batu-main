@@ -1,6 +1,6 @@
 <template>
   <template v-if="!loader">
-    <LandingImage :counter="details.counter" color="text-gray-light" background="bg-gray-light" v-if="details.counter"/>
+    <LandingImage :counter="details.counter" color="text-gray-light" background="bg-gray-light " styles="sm:brightness-[4]" v-if="details.counter"/>
     <News :news="news" class=" mt-16" />
     <Departments :departments="departmentData" v-if="departmentData" />
     <OurActivities :activities="details.activity"/>
