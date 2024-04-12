@@ -8,6 +8,7 @@ import ContactUs from "@views/main/ContactUs/Contact.vue";
 import Main from "@views/main/Main.vue";
 import work_apply from "@views/main/apply_for_work/apply_for_work.vue";
 import how_to_apply from "@views/main/How_to_apply/How_to_apply.vue";
+import dr_page from "@views/main/dr_page/dr_page.vue";
 
 import Book from "@views/main/flipBook/Book.vue";
 
@@ -30,6 +31,7 @@ export default createRouter({
                 { path: "/book", component: Book },
                 { path: "/work_apply", component: work_apply },
                 { path: "/how_to_apply", component: how_to_apply },
+                { path: "/dr", component: dr_page },
             ],
         },
         {

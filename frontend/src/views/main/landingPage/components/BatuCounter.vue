@@ -89,15 +89,20 @@ function animateStudentClubsCount(limit) {
 }
 </script> -->
 <template>
-  <template v-if=" props.counter">
+  <template v-if="props.counter || props.certificates">
     <div class="grid grid-cols-1 lg:grid-cols-3 w-11/12 md:grid-cols-2 items-center">
-      <div v-for="item in props.counter" :key="item.id"
+      <div v-for="item in props.counter || props.certificates" :key="item.id"
         class=" w-80 text-center items-center px-7 py-4 flex flex-col m-auto gap-4" :class="props.color">
         <span class=" w-16 h-16">
-          <img loading="lazy" :src="item.image" alt="" class="m-auto w-full h-full object-contain grayscale filter brightness-100 " :class="props.background, props.styles">
+          <img loading="lazy" :src="item.image" alt=""
+            class="m-auto w-full h-full object-contain grayscale filter brightness-100 "
+            :class="props.background, props.styles">
         </span>
-        <h3 class=" font-sans text-xl font-bold flex justify-center gap-2"><count-up :end-val="item.counter_number"
-            :duration="2.5" :autoplay="true" :options="options"></count-up> {{ item.title }}</h3>
+        <h3 class=" font-sans text-xl font-bold flex justify-center gap-2">
+          <template v-if="item.counter_number">
+            <count-up :end-val="item.counter_number" :duration="2.5" :autoplay="true" :options="options"></count-up>
+          </template> {{ item.title }}
+        </h3>
         <p class=" text-xs font-normal">{{ item.description }}</p>
       </div>
     </div>
@@ -106,10 +111,6 @@ function animateStudentClubsCount(limit) {
 
 <script setup>
 import CountUp from 'vue-countup-v3'
-import { ref } from 'vue';
-import BaseCard from "@components/BaseCard.vue";
-
-
 
 const options = {
   enableScrollSpy: true,
@@ -117,34 +118,10 @@ const options = {
 
 const props = defineProps({
   counter: Array,
+  certificates: Array,
   color: String,
   bg_color: String,
   styles: String,
 })
-console.log(props.bg_color)
-const faculty = ref(0)
-const students = ref(0)
-const clubs = ref(0)
-const view = ref(false)
 
-const getData = () => {
-  props.counter.forEach(element => {
-    switch (element.title) {
-      case "faculty":
-        return faculty.value = element;
-      case "student":
-        return students.value = element;
-      case "clubs":
-        return clubs.value = element;
-      default:
-        break;
-    }
-  });
-  view.value = true
-}
-
-getData()
-const facultiesCount = ref(0);
-const studentsCount = ref(0);
-const studentClubsCount = ref(0);
 </script>

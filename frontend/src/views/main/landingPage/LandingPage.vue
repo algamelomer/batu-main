@@ -1,11 +1,16 @@
 <template>
   <template v-if="!loader">
-    <LandingImage :counter="details.counter" color="text-gray-light" background="bg-gray-light " styles="sm:brightness-[4]" v-if="details.counter"/>
-    <News :news="news" class=" mt-16" />
+    <LandingImage :counter="details.counter" color="text-gray-light" background="bg-gray-light "
+      styles="sm:brightness-[4]" v-if="details.counter" />
+    <News :news="news" class=" mt-16" title="Recent News"
+      subtitle="Explore our latest university news. Stay informed about breakthroughs, events, and achievements shaping our dynamic academic community. Discover more." />
     <Departments :departments="departmentData" v-if="departmentData" />
-    <OurActivities :activities="details.activity"/>
-    <BatuCounter class="sm:hidden" :counter="details.counter" color="text-gray-dark" background="bg-gray-dark" v-if="details.counter"/>
-    <BatuJourneys />
+    <OurActivities :activities="details.activity" />
+    <BatuCounter class="sm:hidden" :counter="details.counter" color="text-gray-dark" background="bg-gray-dark"
+      v-if="details.counter" />
+    <BaseImgSection title="Academic Odyssey BATU Journeys"
+      description="Embark on a transformative Academic Odyssey at BATU – where knowledge meets innovation, shaping future leaders and visionaries."
+      imgPath="http://127.0.0.1:8000/assets/images/Academic-Odyssey-BATU-Journeys.jpg" />
   </template>
   <template v-else>
     <div class="flex justify-center items-center h-screen">
@@ -34,7 +39,7 @@ import filterData from '@/global/filterData.js';
 import LandingImage from "./components/LandingImage.vue";
 import OurActivities from "./components/OurActivities.vue";
 import BatuCounter from "./components/BatuCounter.vue";
-import BatuJourneys from "./components/BatuJourneys.vue";
+import BaseImgSection from "@/components/BaseImgSection.vue";
 import Departments from "./components/Departments.vue";
 import News from "@/views/main/landingPage/components/news.vue";
 
